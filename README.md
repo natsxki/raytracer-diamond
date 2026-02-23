@@ -8,4 +8,4 @@ Raytracing for real-time realistic diamonds simulations
 
 ## Content
 - Presentation paper (theory, code explanation, features)
-- C++ (OpenGL) code 
+- C++, GLSL code 
