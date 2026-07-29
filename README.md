@@ -2,7 +2,7 @@
 
 # ⋆౨ৎ⋆ Raytracer Diamond ⋆౨ৎ⋆
 
-***Real-time, physically-based raytracing of sparkly little diamonds ♡***
+***Real-time, physically-based raytracing of diamonds ***
 
 <br>
 
@@ -23,7 +23,7 @@
 
 ## What is this?
 
-A little computer graphics project that simulates the way light *actually* behaves inside a cut diamond — bouncing, bending, splitting into colors, and slowly getting absorbed — while the stone tumbles and bounces around under gravity. Everything is raytraced live on the GPU, so you can spin the camera, drag the lights around, and drop a fresh diamond whenever you like. ✧
+A computer graphics project that simulates the way light *actually* behaves inside a cut diamond — bouncing, bending, splitting into colors, and slowly getting absorbed, while the stone tumbles and bounces around under gravity. Everything is raytraced live on the GPU, so you can spin the camera, drag the lights around, and drop a fresh diamond whenever you like. 
 
 Built as the final project for **IGR — Fundamentals of Computer Graphics** (Télécom Paris).
 
@@ -39,7 +39,7 @@ Every pixel is computed by tracing rays through the scene, with the full physics
 - **Refraction & reflection** at every surface, using Snell's law
 - **Total Internal Reflection (TIR)** — the effect that makes diamonds sparkle, when light gets trapped inside and bounces back out
 - **Fresnel** term (Schlick approximation) to blend reflection vs. transmission by viewing angle
-- **Chromatic dispersion** — red, green & blue are traced with slightly different indices of refraction (`1.70 / 1.80 / 1.90`), giving that lovely rainbow "fire" ⋆｡°✩
+- **Chromatic dispersion** — red, green & blue are traced with slightly different indices of refraction (`1.70 / 1.80 / 1.90`), giving that lovely rainbow "fire" 
 - **Beer–Lambert absorption** — light dims as it travels through the stone, so thicker paths look richer
 
 ### Physics — a tiny rigid-body solver
@@ -53,7 +53,7 @@ A hand-written solver (`RigidSolver.hpp`) handles the motion:
 
 ### Scene & lighting
 
-- Two movable colored lights (a red one and a blue one 🔴🔵)
+- Two movable colored lights (a red one and a blue one)
 - Toggleable **mirror / matte** floor
 - **Dark / light** background modes
 - Save the current frame straight to a `.ppm` image
@@ -79,7 +79,7 @@ A hand-written solver (`RigidSolver.hpp`) handles the motion:
                                              │  ↳ absorb     │
                                              └───────┬───────┘
                                                      ▼
-                                              sparkly pixel ✧
+                                               sparkly pixel 
 ```
 
 The C++ side is basically a thin host: it opens a window, loads the diamond mesh, streams the triangles to the GPU as a `samplerBuffer`, advances the physics, and draws a single full-screen quad. **All the actual rendering happens in `raytracer.frag`**, once per pixel, every frame.
@@ -127,7 +127,7 @@ g++ -std=c++17 src/*.cpp glad.c \
 ./raytracer-diamond
 ```
 
-> ⚠️ *Small heads-up:* the `data/` folder (with `diamond.obj`) and a proper build file aren't in the repo yet — you'll want to add your own mesh and, ideally, a `CMakeLists.txt` to make this reproducible. ♡
+> !!! *Small heads-up:* the `data/` folder (with `diamond.obj`) and a proper build file aren't in the repo yet — you'll want to add your own mesh and, ideally, a `CMakeLists.txt` to make this reproducible
 
 ---
 
@@ -151,12 +151,12 @@ raytracer-diamond/
 └── README.md
 ```
 
-📄 The **[presentation](presentation.pdf)** goes deeper into the theory and the implementation — a good read if you want the math behind the sparkle.
+The **[presentation](presentation.pdf)** goes deeper into the theory and the implementation
 
 ---
 
 <div align="center">
 
-*Project made for Télécom Paris 3D graphics course, by [**natsxki**](https://github.com/natsxki) 
+*Made by [**natsxki**](https://github.com/natsxki) 
 
 </div>
