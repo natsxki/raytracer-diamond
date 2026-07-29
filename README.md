@@ -23,26 +23,26 @@
 
 ## What is this?
 
-A computer graphics project that simulates the way light *actually* behaves inside a cut diamond — bouncing, bending, splitting into colors, and slowly getting absorbed, while the stone tumbles and bounces around under gravity. Everything is raytraced live on the GPU, so you can spin the camera, drag the lights around, and drop a fresh diamond whenever you like. 
+A computer graphics project that simulates the way light *actually* behaves inside a cut diamond - bouncing, bending, splitting into colors, and slowly getting absorbed, while the stone tumbles and bounces around under gravity. Everything is raytraced live on the GPU, so you can spin the camera, drag the lights around, and drop a fresh diamond whenever you like. 
 
-Built as the final project for **IGR — Fundamentals of Computer Graphics** (Télécom Paris).
+Built as the final project for **IGR - Fundamentals of Computer Graphics** (Télécom Paris).
 
 ---
 
 ## Features
 
-### Optics — simulated in GLSL
+### Optics - simulated in GLSL
 
 Every pixel is computed by tracing rays through the scene, with the full physics of gemstones baked into the shader:
 
-- **Whitted raytracing** — recursive reflection & refraction, up to `12` bounces per ray
+- **Whitted raytracing** - recursive reflection & refraction, up to `12` bounces per ray
 - **Refraction & reflection** at every surface, using Snell's law
-- **Total Internal Reflection (TIR)** — the effect that makes diamonds sparkle, when light gets trapped inside and bounces back out
+- **Total Internal Reflection (TIR)** - the effect that makes diamonds sparkle, when light gets trapped inside and bounces back out
 - **Fresnel** term (Schlick approximation) to blend reflection vs. transmission by viewing angle
-- **Chromatic dispersion** — red, green & blue are traced with slightly different indices of refraction (`1.70 / 1.80 / 1.90`), giving that lovely rainbow "fire" 
-- **Beer–Lambert absorption** — light dims as it travels through the stone, so thicker paths look richer
+- **Chromatic dispersion** - red, green & blue are traced with slightly different indices of refraction (`1.70 / 1.80 / 1.90`), giving that lovely rainbow "fire" 
+- **Beer–Lambert absorption** - light dims as it travels through the stone, so thicker paths look richer
 
-### Physics — a tiny rigid-body solver
+### Physics - a tiny rigid-body solver
 
 A hand-written solver (`RigidSolver.hpp`) handles the motion:
 
@@ -91,7 +91,7 @@ The C++ side is basically a thin host: it opens a window, loads the diamond mesh
 | Key | Action |
 |:---:|:-------|
 | `P` | ▶ / ⏸ play / pause the simulation |
-| `R` | ✧ reset — drop a brand-new diamond |
+| `R` | ✧ reset - drop a brand-new diamond |
 | `F` | reset the camera |
 | `M` | toggle floor: mirror ⇄ matte |
 | `W` | toggle walls on / off |
@@ -127,7 +127,7 @@ g++ -std=c++17 src/*.cpp glad.c \
 ./raytracer-diamond
 ```
 
-> !!! *Small heads-up:* the `data/` folder (with `diamond.obj`) and a proper build file aren't in the repo yet — you'll want to add your own mesh and, ideally, a `CMakeLists.txt` to make this reproducible
+> !!! *Small heads-up:* the `data/` folder (with `diamond.obj`) and a proper build file aren't in the repo yet - you'll want to add your own mesh and, ideally, a `CMakeLists.txt` to make this reproducible
 
 ---
 
