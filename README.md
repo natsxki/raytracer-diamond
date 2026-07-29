@@ -157,6 +157,6 @@ raytracer-diamond/
 
 <div align="center">
 
-*Made by [**natsxki**](https://github.com/natsxki) ⋆౨ৎ⋆*
+*Project made for Télécom Paris 3D graphics course, by [**natsxki**](https://github.com/natsxki) 
 
 </div>
