@@ -25,7 +25,7 @@ Real-time, physically-based raytracing of diamonds
 
 A computer graphics project that simulates the way light *actually* behaves inside a cut diamond - bouncing, bending, splitting into colors, and slowly getting absorbed, while the stone tumbles and bounces around under gravity. Everything is raytraced live on the GPU, so you can spin the camera, drag the lights around, and drop a fresh diamond whenever you like. 
 
-Built as the final project for **IGR - Fundamentals of Computer Graphics** (Télécom Paris).
+Built as the final project for Fundamentals of Computer Graphics at Télécom Paris (IGR Track).
 
 ---
 
@@ -157,6 +157,6 @@ The **[presentation](presentation.pdf)** goes deeper into the theory and the imp
 
 <div align="center">
 
-*Made by [**natsxki**](https://github.com/natsxki) 
+Made by [**natsxki**](https://github.com/natsxki) 
 
 </div>
