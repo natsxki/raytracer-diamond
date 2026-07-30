@@ -2,7 +2,7 @@
 
 # ⋆౨ৎ⋆ Raytracer Diamond ⋆౨ৎ⋆
 
-***Real-time, physically-based raytracing of diamonds ***
+Real-time, physically-based raytracing of diamonds
 
 <br>
 
